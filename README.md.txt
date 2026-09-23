@@ -1,0 +1,1 @@
+My hands-on PLC and industrial automation learning journey — Siemens & Mitsubishi.
