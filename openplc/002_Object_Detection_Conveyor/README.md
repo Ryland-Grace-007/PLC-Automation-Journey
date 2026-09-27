@@ -256,3 +256,9 @@ This project is part of my ongoing hands-on PLC and Industrial Automation portfo
 The objective of this repository is not only to store completed projects, but also to document:
 
 **What I built → Why I built it → How it works → What went wrong → How I fixed it → What I learned.**
+
+---
+
+## Project Evidence
+
+![Project #002 - Object Detection Conveyor](screenshots/Project_002_Object_Detection_Conveyor.png)
