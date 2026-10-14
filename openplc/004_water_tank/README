@@ -1,0 +1,105 @@
+# Project #004 — Water Tank Level Control
+
+## 1. Project Overview
+
+This is the fourth project in my PLC & Industrial Automation learning journey.
+
+The project is a basic automatic water tank level control system developed using OpenPLC Editor V4 and tested using the OpenPLC Simulator.
+
+The purpose of this project was to move beyond simple motor control, sensor detection, timers and counters, and apply PLC logic to a practical process-control application.
+
+In this project, the PLC monitors the water level inside a tank and controls a water pump according to the detected water-level condition.
+
+The objective is to automatically maintain the water level within the required range by switching the pump ON or OFF according to the programmed logic.
+
+---
+
+## 2. Agenda
+
+The main objectives of this project were:
+
+- Understand how PLCs can be used for water-level control.
+- Use level sensors as PLC inputs.
+- Control a water pump automatically using Ladder Logic.
+- Understand how multiple input conditions can control one output.
+- Practice Boolean logic in a practical automation application.
+- Understand how the PLC continuously monitors a physical process.
+- Test different water-level conditions using the OpenPLC Simulator.
+- Troubleshoot unexpected pump behaviour.
+- Understand the basic concept of automatic process control.
+
+---
+
+## 3. Basic Idea
+
+The basic idea is:
+
+WATER LEVEL CHANGES → LEVEL SENSOR DETECTS CONDITION → PLC EVALUATES LOGIC → WATER PUMP RESPONDS
+
+The PLC acts as the decision-making element between the water-level sensors and the pump.
+
+### Simplified Concept
+
+LOW LEVEL SENSOR ──┐
+                    │
+HIGH LEVEL SENSOR ──┤
+                    ↓
+                PLC LOGIC
+                    ↓
+               WATER PUMP
+
+The PLC continuously checks the level conditions and determines whether the water pump should operate.
+
+---
+
+## 4. Practical Application
+
+The control concept used in this project can be applied to real systems such as:
+
+- Water storage tanks
+- Industrial process tanks
+- Cooling-water systems
+- Pumping systems
+- Manufacturing processes
+- Process industries
+- Automatic water-supply systems
+
+The project is a simplified PLC simulation of this type of industrial level-control system.
+
+---
+
+## 5. PLC Variables
+
+The project uses Boolean variables to represent the water-level conditions and pump output.
+
+### Inputs / Control Variables
+
+- `LOW_LEVEL` — represents the low-water-level condition.
+- `HIGH_LEVEL` — represents the high-water-level condition.
+
+### Output
+
+- `WATER_PUMP` — represents the water pump.
+
+The level sensors act as inputs to the PLC, while the water pump represents the controlled output.
+
+---
+
+## 6. Water Level Control Concept
+
+The tank can be considered to have different operating conditions.
+
+### Low Water Level
+
+When the water level falls below the required level, the PLC detects the low-level condition.
+
+The pump is activated to refill the tank.
+
+```text
+WATER LEVEL LOW
+       ↓
+LOW LEVEL DETECTED
+       ↓
+PLC LOGIC
+       ↓
+PUMP ON
